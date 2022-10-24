@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+:root {
+    --primario: #58a4b0;
+    --secundario: #0c7c59;
+    --grisClaro: #F4F4F4;
+    --blanco: #ffffff;
+    --fondoInput: #eeeeee;
+
+    --fuenteTexto: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--grisClaro);
+    font-family: var(--fuenteTexto);
+    color: #3E363F;
+}
+
+#contenedor {
+    background-color: var(--blanco);
+    width: 100%;
+    height: auto;
+
+    /*Centrar un div en la pantalla*/
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    text-align: center;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+@media (min-width: 480px) {
+    #contenedor {
+        max-width: 900px;
+        height: 350px;
+    }
+}
+
+
+#calculadora {
+    width: 100%;
+    height: 65%;
+}
+
+@media (min-width: 480px) {
+    #calculadora {
+        width: 50%;
+        height: 100%;
+        float: left;
+    }
+}
+
+
+#detalle {
+    background-color: var(--primario);
+    width: 100%;
+    height: 35%;
+    color: white;
+}
+
+@media (min-width: 480px) {
+    #detalle {
+        width: 50%;
+        height: 100%;
+        float: right;
+    }
+}
+
+.contenido {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+}
+
+input {
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 12px 15px;
+    width: 55%;
+    background-color: var(--fondoInput);
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    -moz-appearance: textfield;
+}
+
+@media (min-width: 480px) {
+    input {
+        width: unset;
+    }
+}
+
+button {
+    width: 70%;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 12px 45px;
+    border-radius: 30px;
+    background-color: var(--primario);
+    border: 1px solid var(--primario);
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 20ms ease-in;
+}
+
+@media (min-width: 480px) {
+    button {
+        width: unset;
+    }
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#error {
+    color: red;
+    font-weight: bold;
+    display: none;
+}
+
+
+
+.resultado {
+    color: var(--secundario);
+    font-weight: bold;
+    font-size: 25px;
+    display: none;
+}
