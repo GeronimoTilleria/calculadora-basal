@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+:root {
+    --primario: #58a4b0;
+    --secundario: #03b87f;
+    --grisClaro: #F4F4F4;
+    --blanco: #ffffff;
+    --fondoInput: #eeeeee;
+
+    --fuenteTexto: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--grisClaro);
+    font-family: var(--fuenteTexto);
+    color: #3E363F;
+}
+
+#contenedor {
+    background-color: var(--blanco);
+    width: 100%;
+    height: auto;
+
+    /*Centrar un div en la pantalla*/
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 1px 0px 46px -7px rgba(0, 0, 0, 0.75);
+}
+
+@media (min-width: 480px) {
+    #contenedor {
+        max-width: 900px;
+        height: 400px;
+        border-radius: 15px;
+    }
+}
+
+
+#calculadora {
+    width: 100%;
+    min-height: 410px;
+    height: 65%;
+}
+
+@media (min-width: 480px) {
+    #calculadora {
+        width: 50%;
+        height: 100%;
+        float: left;
+    }
+
+    #calculadora h1 {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 720px) {
+
+    #calculadora h1,
+    #detalle h2 {
+        font-size: 30px;
+    }
+
+}
+
+#detalle {
+    background-color: var(--primario);
+    width: 100%;
+    min-height: 265px;
+    height: 35%;
+    color: white;
+}
+
+@media (min-width: 480px) {
+    #detalle {
+        width: 50%;
+        height: 100%;
+        float: right;
+    }
+}
+
+li {
+    text-align: left;
+    font-size: 15px;
+}
+
+@media (min-width: 480px) {
+    li {
+        font-size: unset;
+    }
+}
+
+
+.contenido {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+}
+
+input {
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 12px 15px;
+    width: 55%;
+    background-color: var(--fondoInput);
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    -moz-appearance: textfield;
+}
+
+@media (min-width: 480px) {
+    input {
+        width: unset;
+    }
+}
+
+button {
+    width: 70%;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 12px 45px;
+    border-radius: 30px;
+    background-color: var(--primario);
+    border: 1px solid var(--primario);
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 20ms ease-in;
+}
+
+@media (min-width: 480px) {
+    button {
+        width: unset;
+    }
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#error {
+    background-color: red;
+    color: var(--blanco);
+    width: 60%;
+    margin: 0 auto 10px;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 6px;
+    font-weight: normal;
+    display: none;
+}
+
+#error span {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media (min-width: 480px) {
+    #error {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 720px) {
+    #error {
+        width: 50%;
+    }
+}
+
+
+
+.resultado {
+    color: var(--secundario);
+    font-weight: bold;
+    font-size: 25px;
+    display: none;
+}
